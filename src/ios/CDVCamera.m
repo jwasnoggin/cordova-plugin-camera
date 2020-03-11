@@ -361,7 +361,7 @@ static NSString* toBase64(NSData* data) {
             break;
         case EncodingTypeJPEG:
         {
-            if (options.preserveGalleryFormat == YES || ((options.allowsEditing == NO) && (options.targetSize.width <= 0) && (options.targetSize.height <= 0) && (options.correctOrientation == NO) && (([options.quality integerValue] == 100) || (options.sourceType != UIImagePickerControllerSourceTypeCamera)))){
+            if ((options.preserveGalleryFormat == YES && options.sourceType != UIImagePickerControllerSourceTypeCamera) || ((options.allowsEditing == NO) && (options.targetSize.width <= 0) && (options.targetSize.height <= 0) && (options.correctOrientation == NO) && (([options.quality integerValue] == 100) || (options.sourceType != UIImagePickerControllerSourceTypeCamera)))){
                 // use image unedited as requested , don't resize
                 data = UIImageJPEGRepresentation(image, 1.0);
             } else {
