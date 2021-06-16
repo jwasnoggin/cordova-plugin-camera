@@ -147,8 +147,8 @@ cameraExport.getPicture = function (successCallback, errorCallback, options) {
     var correctOrientation = !!options.correctOrientation;
     var saveToPhotoAlbum = !!options.saveToPhotoAlbum;
     var popoverOptions = getValue(options.popoverOptions, null);
-	var cameraDirection = getValue(options.cameraDirection, Camera.Direction.BACK);
-	var preserveGalleryFormat = getValue(options.preserveGalleryFormat, true);
+    var cameraDirection = getValue(options.cameraDirection, Camera.Direction.BACK);
+    var preserveGalleryFormat = getValue(options.preserveGalleryFormat, true);
 
     var args = [quality, destinationType, sourceType, targetWidth, targetHeight, encodingType,
         mediaType, allowEdit, correctOrientation, saveToPhotoAlbum, popoverOptions, cameraDirection, preserveGalleryFormat];
